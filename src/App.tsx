@@ -55,10 +55,10 @@ function App() {
             Pixi.js Brush Demo
           </button>
           <button onClick={() => setCurrentPage('demo4')} style={{ margin: '0 10px' }}>
-            Demo 4
+            Layer panel
           </button>
           <button onClick={() => setCurrentPage('demo5')} style={{ margin: '0 10px' }}>
-            Demo 5
+            Image Carousel
           </button>
         </div>
         <ThemeToggle />
