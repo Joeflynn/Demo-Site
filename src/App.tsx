@@ -6,6 +6,7 @@ import Demo2 from './pages/Demo2'
 import Demo3 from './pages/Demo3'
 import Demo4 from './pages/Demo4'
 import Demo5 from './pages/Demo5'
+import { ThemeToggle } from './components/ThemeToggle'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
@@ -31,17 +32,38 @@ function App() {
 
   return (
     <div>
-      <nav style={{ padding: '20px', borderBottom: '1px solid #ccc' }}>
-        <button onClick={() => setCurrentPage('home')} style={{ margin: '0 10px' }}>Home</button>
-        <button onClick={() => setCurrentPage('demo1')} style={{ margin: '0 10px' }}>Demo 1</button>
-        <button onClick={() => setCurrentPage('demo2')} style={{ margin: '0 10px' }}>Demo 2</button>
-        <button onClick={() => setCurrentPage('demo3')} style={{ margin: '0 10px' }}>Demo 3</button>
-        <button onClick={() => setCurrentPage('demo4')} style={{ margin: '0 10px' }}>Demo 4</button>
-        <button onClick={() => setCurrentPage('demo5')} style={{ margin: '0 10px' }}>Demo 5</button>
+      <nav
+        style={{
+          padding: '20px',
+          borderBottom: '1px solid #ccc',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}
+      >
+        <div>
+          <button onClick={() => setCurrentPage('home')} style={{ margin: '0 10px' }}>
+            Home
+          </button>
+          <button onClick={() => setCurrentPage('demo1')} style={{ margin: '0 10px' }}>
+            Painting Canvas
+          </button>
+          <button onClick={() => setCurrentPage('demo2')} style={{ margin: '0 10px' }}>
+            Contextual Toolbar
+          </button>
+          <button onClick={() => setCurrentPage('demo3')} style={{ margin: '0 10px' }}>
+            Pixi.js Brush Demo
+          </button>
+          <button onClick={() => setCurrentPage('demo4')} style={{ margin: '0 10px' }}>
+            Demo 4
+          </button>
+          <button onClick={() => setCurrentPage('demo5')} style={{ margin: '0 10px' }}>
+            Demo 5
+          </button>
+        </div>
+        <ThemeToggle />
       </nav>
-      <main style={{ padding: '20px' }}>
-        {renderPage()}
-      </main>
+      <main style={{ padding: '20px' }}>{renderPage()}</main>
     </div>
   )
 }

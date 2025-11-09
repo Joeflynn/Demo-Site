@@ -357,7 +357,7 @@ function MorphingDialogClose({ children, className, variants }: MorphingDialogCl
       onMouseLeave={() => setIsHovered(false)}
     >
       <motion.div
-        className="absolute inset-0 rounded-xl bg-neutral-900/30 dark:bg-white/30"
+        className="absolute inset-0 rounded-xl bg-neutral-900/50"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: isHovered ? 1 : 0.6, scale: isHovered ? 1 : 0.8 }}
         transition={{ duration: 0.2 }}
